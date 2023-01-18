@@ -1,10 +1,28 @@
 title: Astro
 author: robertmitchellv
-version: 1.0.0
+version: 0.1.0
 quarto-required: ">=99.9.0"
 contributes:
+  project:
+    project:
+      type: default
+      detect:
+        - ["astro.config.msj", "package.json"]
+      render:
+        - "**/*.qmd"
+        - "**/*.ipynb"
+      preview:
+        serve:
+          cmd: "npm run dev"
+          ready: "compiled successfully or blast off astronaut?"
+    format: astro-md
   formats:
-    html:
-      toc: true
-      theme: [yeti, custom.scss]
-
+    md:
+      variant: +yaml_metadata_block+pipe_tables+tex_math_dollars+header_attributes-all_symbols_escapable
+      wrap: none
+      fig-format: retina
+      fig-width: 8
+      fig-height: 5
+      html-math-method: webtex
+      filters:
+        - astro.lua
