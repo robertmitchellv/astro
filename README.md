@@ -1,11 +1,15 @@
-# <%= title %> Format
+<div style="display:flex" align="center">
+  <img title="astro!" height="65px" width="65px" hspace=10 src="https://cdn.simpleicons.org/astro/FF5D01" />
+</div>
+
+# Astro for Quarto
+
+This is a WIP; still figuring out how to make this work!
 
 ## Installing
 
-*TODO*: Replace the `<github-organization>` with your GitHub organization.
-
 ```bash
-quarto use template <github-organization>/<%= filesafename %>
+quarto use template robertmitchellv/astro
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your article.
